@@ -1,6 +1,5 @@
 # AIPoweredCryptocurrencyMarketForecasting
 AI-powered hybrid framework for cryptocurrency market forecasting using Temporal Fusion Transformer (TFT), FinBERT sentiment analysis, and Soft Actor-Critic (SAC) reinforcement learning.
-# AI-Powered Cryptocurrency Market Forecasting
 
 An AI-driven hybrid framework for **cryptocurrency market forecasting and trading strategy analysis**, combining **deep learning, NLP-based sentiment analysis, and reinforcement learning**.
 
