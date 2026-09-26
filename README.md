@@ -31,4 +31,83 @@ The framework evaluates forecasting and trading performance using metrics such a
 To develop a hybrid AI framework that combines **price forecasting, financial sentiment analysis, and reinforcement learning** for data-driven cryptocurrency market analysis and trading strategy evaluation.
 
 > **Note:** This project is developed for research and educational purposes and does not constitute financial advice.
+> ## 🏗️ Architecture & Workflow
+
+The proposed framework follows a multi-stage pipeline that integrates **market data, financial sentiment, deep learning, and reinforcement learning**.
+
+```text
+                  ┌─────────────────────────┐
+                  │     Data Collection     │
+                  └────────────┬────────────┘
+                               │
+                ┌──────────────┴──────────────┐
+                │                             │
+        ┌───────▼────────┐          ┌────────▼─────────┐
+        │  Market Data   │          │ News & Social    │
+        │    (OHLCV)     │          │ Media Data       │
+        └───────┬────────┘          └────────┬─────────┘
+                │                            │
+        ┌───────▼────────┐          ┌────────▼─────────┐
+        │ Preprocessing  │          │ Text Cleaning &  │
+        │ & Feature Eng. │          │ Preprocessing    │
+        └───────┬────────┘          └────────┬─────────┘
+                │                            │
+        ┌───────▼────────┐          ┌────────▼─────────┐
+        │      TFT       │          │     FinBERT      │
+        │ Time-Series    │          │ Sentiment        │
+        │ Forecasting    │          │ Analysis         │
+        └───────┬────────┘          └────────┬─────────┘
+                │                            │
+                └──────────────┬─────────────┘
+                               │
+                     ┌─────────▼─────────┐
+                     │ Signal Integration│
+                     │ Market + Sentiment│
+                     └─────────┬─────────┘
+                               │
+                     ┌─────────▼─────────┐
+                     │       SAC         │
+                     │ Reinforcement     │
+                     │ Learning Agent     │
+                     └─────────┬─────────┘
+                               │
+                     ┌─────────▼─────────┐
+                     │ Trading Strategy  │
+                     │ & Decision Making │
+                     └─────────┬─────────┘
+                               │
+                     ┌─────────▼─────────┐
+                     │    Evaluation     │
+                     │ RMSE • MAE        │
+                     │ Sharpe • Sortino  │
+                     └───────────────────┘
+```
+
+### 🔄 Workflow
+
+1. **Data Collection**
+   Historical cryptocurrency **OHLCV data** is collected along with relevant news and social media content.
+
+2. **Data Preprocessing**
+   Market data is cleaned and transformed into suitable time-series features, while textual data undergoes preprocessing before sentiment analysis.
+
+3. **Market Forecasting — TFT**
+   The **Temporal Fusion Transformer (TFT)** learns temporal patterns and relationships within market data to generate cryptocurrency price/trend forecasts.
+
+4. **Sentiment Analysis — FinBERT**
+   **FinBERT** analyzes financial text to extract positive, negative, or neutral sentiment signals from news and social media.
+
+5. **Signal Integration**
+   Forecasting outputs and sentiment signals are combined to provide a richer representation of the current and expected market conditions.
+
+6. **Reinforcement Learning — SAC**
+   The **Soft Actor-Critic (SAC)** agent interacts with the market environment and learns trading policies based on the integrated signals.
+
+7. **Trading Strategy Evaluation**
+   The resulting strategy is evaluated using both forecasting and risk-adjusted performance metrics, including **RMSE, MAE, Sharpe Ratio, and Sortino Ratio**.
+
+### 🔗 End-to-End Pipeline
+
+**Market Data + Sentiment Data → Preprocessing → TFT Forecasting + FinBERT Sentiment → Signal Fusion → SAC Agent → Trading Strategy → Performance Evaluation**
+
 
